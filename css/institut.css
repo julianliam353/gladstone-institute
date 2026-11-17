@@ -1,0 +1,855 @@
+/* =====================================
+   GLADSTONE INSTITUTE
+   PAGE INSTITUT
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.site-header {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid #ededed;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-nav a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+    padding: 10px 0;
+    transition: color .3s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #171717;
+    transition: width .3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 20px;
+    border: 1px solid #171717;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background .3s ease, color .3s ease;
+}
+
+.header-button:hover {
+    background: #171717;
+    color: #fff;
+}
+
+.header-button span {
+    font-size: 16px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.institut-hero {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #222;
+}
+
+.institut-hero-image {
+    position: absolute;
+    inset: 0;
+}
+
+.institut-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 1.5s ease both;
+}
+
+.institut-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, .75) 0%,
+        rgba(0, 0, 0, .42) 48%,
+        rgba(0, 0, 0, .08) 100%
+    );
+}
+
+.institut-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    color: #fff;
+    animation: heroContent 1s ease both;
+}
+
+.institut-hero-content > span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.institut-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+    line-height: 1.13;
+    margin-bottom: 25px;
+}
+
+.institut-hero-content p {
+    max-width: 430px;
+    font-size: 13px;
+    line-height: 2;
+    color: #e4e4e4;
+    font-weight: 300;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 38px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: gap .3s ease;
+}
+
+.hero-link:hover {
+    gap: 50px;
+}
+
+.hero-link span {
+    font-size: 19px;
+}
+
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.institut-intro {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 125px 0 110px;
+}
+
+.intro-label {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.intro-label span:first-child {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.intro-line {
+    width: 65px;
+    height: 1px;
+    background: #999;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.intro-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 650px;
+}
+
+.intro-text {
+    padding-top: 10px;
+}
+
+.intro-text p {
+    font-size: 13px;
+    line-height: 2.2;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   TITRE DE LA GALERIE
+===================================== */
+
+.spaces-section {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 130px;
+}
+
+.spaces-heading {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.spaces-heading > span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.spaces-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 55px);
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.spaces-heading p {
+    font-size: 12px;
+    color: #888;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   GALERIE DES ESPACES
+===================================== */
+
+.spaces-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 45px;
+    align-items: start;
+}
+
+.space-card {
+    width: 100%;
+    cursor: pointer;
+}
+
+.space-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background: #eee;
+    position: relative;
+}
+
+.space-large .space-image {
+    height: 470px;
+}
+
+.space-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease, filter .8s ease;
+}
+
+.space-card:hover .space-image img {
+    transform: scale(1.06);
+    filter: brightness(.88);
+}
+
+.space-caption {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding-top: 22px;
+}
+
+.space-caption span {
+    font-size: 10px;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.space-caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+
+/* =====================================
+   CTA
+===================================== */
+
+.institut-cta {
+    min-height: 450px;
+    background: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    color: #fff;
+}
+
+.cta-content > span {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #aaa;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 28px 0 35px;
+}
+
+.cta-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid #777;
+    padding: 17px 25px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background .3s ease, border-color .3s ease;
+}
+
+.cta-content a:hover {
+    background: #fff;
+    color: #171717;
+    border-color: #fff;
+}
+
+.cta-content a span {
+    font-size: 17px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.site-footer {
+    background: #f5f5f5;
+    padding: 75px 0 0;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 70px;
+    padding-bottom: 65px;
+}
+
+.footer-brand img {
+    width: 135px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+.footer-brand p {
+    max-width: 280px;
+    font-size: 12px;
+    line-height: 2;
+    color: #777;
+    font-weight: 300;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footer-column h3 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 12px;
+    color: #777;
+    font-weight: 300;
+    transition: color .3s ease;
+}
+
+.footer-column a:hover {
+    color: #111;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e2e2e2;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 25px 0;
+}
+
+.footer-bottom p {
+    font-size: 10px;
+    color: #999;
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes heroContent {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.js-ready .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .9s ease, transform .9s ease;
+}
+
+.js-ready .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   RESPONSIVE TABLETTE
+===================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+
+    .header-button {
+        padding: 13px;
+        font-size: 9px;
+    }
+
+    .intro-content {
+        gap: 50px;
+    }
+
+    .spaces-grid {
+        gap: 45px 25px;
+    }
+
+    .space-image {
+        height: 300px;
+    }
+
+    .space-large .space-image {
+        height: 390px;
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .site-header {
+        height: 78px;
+    }
+
+    .header-container {
+        width: 90%;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 110;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 27px;
+        height: 1.5px;
+        background: #171717;
+        transition: transform .3s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(4.25px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-4.25px) rotate(-45deg);
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 5% 25px;
+        border-top: 1px solid #eee;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .06);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    }
+
+    .main-nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .main-nav a {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 11px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+
+
+    /* HERO MOBILE */
+
+    .institut-hero {
+        height: 540px;
+    }
+
+    .institut-hero-overlay {
+        background: rgba(0, 0, 0, .55);
+    }
+
+    .institut-hero-content {
+        width: 88%;
+    }
+
+    .institut-hero-content > span {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+        margin-bottom: 22px;
+    }
+
+    .institut-hero-content h1 {
+        font-size: 47px;
+    }
+
+    .institut-hero-content p {
+        font-size: 12px;
+        max-width: 310px;
+    }
+
+    .hero-link {
+        margin-top: 30px;
+        font-size: 9px;
+    }
+
+
+    /* INTRO MOBILE */
+
+    .institut-intro {
+        padding: 85px 0;
+    }
+
+    .intro-label {
+        margin-bottom: 35px;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .intro-content h2 {
+        font-size: 38px;
+    }
+
+    .intro-text p {
+        font-size: 12px;
+    }
+
+
+    /* GALERIE MOBILE */
+
+    .spaces-section {
+        padding-bottom: 85px;
+    }
+
+    .spaces-heading {
+        margin-bottom: 45px;
+    }
+
+    .spaces-heading h2 {
+        font-size: 37px;
+    }
+
+    .spaces-heading p {
+        font-size: 11px;
+        padding: 0 15px;
+    }
+
+    .spaces-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .space-image,
+    .space-large .space-image {
+        height: 320px;
+    }
+
+    .space-caption {
+        padding-top: 17px;
+        gap: 15px;
+    }
+
+    .space-caption h3 {
+        font-size: 21px;
+    }
+
+
+    /* CTA MOBILE */
+
+    .institut-cta {
+        min-height: 390px;
+    }
+
+    .cta-content h2 {
+        font-size: 39px;
+    }
+
+    .cta-content a {
+        font-size: 9px;
+        padding: 15px 18px;
+    }
+
+
+    /* FOOTER MOBILE */
+
+    .site-footer {
+        padding-top: 55px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 25px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand p {
+        max-width: 320px;
+    }
+
+    .footer-column h3 {
+        font-size: 10px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================
+   PETITS ECRANS
+===================================== */
+
+@media screen and (max-width: 380px) {
+
+    .institut-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .intro-content h2 {
+        font-size: 33px;
+    }
+
+    .space-image,
+    .space-large .space-image {
+        height: 260px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =====================================
+   ACCESSIBILITE
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

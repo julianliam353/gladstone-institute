@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galerie | GLADSTONE Institute</title>
+
+    <link rel="stylesheet" href="css/galerie.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="GLADSTONE Institute">
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="index.html">Accueil</a>
+            <a href="prestations.html">Prestations</a>
+            <a href="galerie.html" class="active">Galerie</a>
+            <a href="institut.html">L'institut</a>
+            <a href="equipe.html">L'équipe</a>
+
+        </nav>
+
+        <a href="reservation.html" class="header-booking">
+
+            <span>PRENDRE RENDEZ-VOUS</span>
+
+            <span class="booking-arrow">↗</span>
+
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+    <div class="header-line"></div>
+
+</header>
+
+
+<!-- BANNIÈRE -->
+
+<section class="gallery-hero">
+
+    <div class="gallery-hero-content">
+
+        <span class="section-label">GLADSTONE INSTITUTE</span>
+
+        <h1>
+            La beauté<br>
+            en images.
+        </h1>
+
+        <p>
+            Découvrez notre univers à travers
+            une sélection de photographies.
+        </p>
+
+    </div>
+
+    <div class="gallery-hero-image">
+
+        <img src="images/photo-principale.jpg"
+             alt="Univers de beauté GLADSTONE">
+
+    </div>
+
+    <span class="gallery-hero-number">
+        01 / GALERIE
+    </span>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="gallery-intro">
+
+    <span class="section-label">NOTRE UNIVERS EN IMAGES</span>
+
+    <h2>
+        Des instants de beauté,<br>
+        des détails qui font la différence.
+    </h2>
+
+    <p>
+        Explorez les différents univers de GLADSTONE Institute
+        à travers notre galerie photographique.
+    </p>
+
+</section>
+
+
+<!-- GALERIE PHOTOS -->
+
+<section class="gallery-section">
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item gallery-large">
+
+            <img src="images/photo-principale.jpg"
+                 alt="Univers de GLADSTONE Institute">
+
+            <div class="gallery-overlay">
+                <span>01</span>
+                <p>Notre univers</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/coiffure.jpg"
+                 alt="Univers coiffure">
+
+            <div class="gallery-overlay">
+                <span>02</span>
+                <p>Coiffure</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/soins-esthetiques.jpg"
+                 alt="Soins esthétiques">
+
+            <div class="gallery-overlay">
+                <span>03</span>
+                <p>Soins esthétiques</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/onglerie.jpg"
+                 alt="Univers onglerie">
+
+            <div class="gallery-overlay">
+                <span>04</span>
+                <p>Onglerie</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item gallery-tall">
+
+            <img src="images/photo-secondaire.jpg"
+                 alt="Ambiance GLADSTONE Institute">
+
+            <div class="gallery-overlay">
+                <span>05</span>
+                <p>Notre ambiance</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/bien-etre.jpg"
+                 alt="Univers bien-être">
+
+            <div class="gallery-overlay">
+                <span>06</span>
+                <p>Bien-être</p>
+                <span class="gallery-zoom">↗</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MODALE POUR AGRANDIR LES PHOTOS -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose"
+        aria-label="Fermer">
+        &times;
+    </button>
+
+    <button class="lightbox-prev" id="lightboxPrev"
+        aria-label="Photo précédente">
+        &#10094;
+    </button>
+
+    <img src="" alt="Photographie agrandie" id="lightboxImage">
+
+    <button class="lightbox-next" id="lightboxNext"
+        aria-label="Photo suivante">
+        &#10095;
+    </button>
+
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+
+</div>
+
+
+<!-- SECTION RENDEZ-VOUS -->
+
+<section class="gallery-booking">
+
+    <span class="section-label">VOTRE MOMENT VOUS ATTEND</span>
+
+    <h2>
+        Et si vous preniez<br>
+        soin de vous ?
+    </h2>
+
+    <p>
+        Découvrez nos prestations et accordez-vous
+        un moment dédié à votre beauté.
+    </p>
+
+    <a href="reservation.html" class="booking-button">
+        PRENDRE RENDEZ-VOUS ↗
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <a href="index.html" class="footer-logo">
+
+                <img src="images/logo.jpg"
+                     alt="GLADSTONE Institute">
+
+            </a>
+
+            <p>
+                Un univers dédié à la beauté,
+                au bien-être et à l'élégance.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Navigation</h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="prestations.html">Prestations</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="institut.html">L'institut</a>
+            <a href="equipe.html">L'équipe</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Nous contacter</h3>
+
+            <p>391 Rue Tokoto, Douala</p>
+            <p>+237 677 95 38 93</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 GLADSTONE Institute. Tous droits réservés.</p>
+
+        <p>Beauté · Soin · Élégance</p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/galerie.js"></script>
+
+</body>
+</html>
